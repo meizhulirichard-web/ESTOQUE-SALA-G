@@ -1,0 +1,245 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:"Segoe UI",sans-serif;
+}
+
+body{
+  background:#f4f0eb;
+  padding:10px;
+}
+
+/* HEADER */
+
+header{
+  height:70px;
+  background:linear-gradient(90deg,#7b4d26,#5a3516);
+  border-radius:10px;
+  padding:0 20px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  color:#fff;
+}
+
+.title{
+  font-size:28px;
+  font-weight:700;
+}
+
+.actions{
+  display:flex;
+  gap:10px;
+}
+
+.actions button{
+  padding:12px 20px;
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:8px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.actions button:hover{
+  background:rgba(255,255,255,.1);
+}
+
+/* LAYOUT */
+
+.content{
+  display:flex;
+  gap:20px;
+  margin-top:20px;
+}
+
+aside{
+  width:340px;
+  flex-shrink:0;
+}
+
+main{
+  flex:1;
+  background:#fff;
+  border-radius:12px;
+  padding:20px;
+  border:1px solid #ddd;
+}
+
+/* CARDS */
+
+.card{
+  background:#fff;
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:20px;
+  border:1px solid #ddd;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.card h2{
+  margin-bottom:20px;
+  color:#5d391b;
+}
+
+/* FORM */
+
+label{
+  display:block;
+  margin-top:12px;
+  margin-bottom:5px;
+  font-weight:600;
+}
+
+input,
+select{
+  width:100%;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  outline:none;
+}
+
+input:focus,
+select:focus{
+  border-color:#7b4d26;
+}
+
+.row{
+  display:flex;
+  gap:10px;
+  margin-top:10px;
+}
+
+.row div{
+  flex:1;
+}
+
+/* BOTÕES */
+
+.save{
+  width:100%;
+  margin-top:20px;
+  padding:14px;
+  border:none;
+  border-radius:8px;
+  background:#70421f;
+  color:#fff;
+  cursor:pointer;
+  font-weight:600;
+  transition:.2s;
+}
+
+.save:hover{
+  background:#5c3518;
+}
+
+/* RESULTADO */
+
+.result{
+  margin-top:15px;
+  padding:15px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  min-height:60px;
+  background:#fafafa;
+}
+
+/* MAPA */
+
+.mapa{
+  width:100%;
+  height:850px;
+  display:block;
+  background:#fdfdfd;
+  border-radius:10px;
+}
+
+/* ESTANTES */
+
+.estante{
+  cursor:pointer;
+  stroke:#666;
+  stroke-width:2;
+  transition:.15s;
+}
+
+.estante:hover{
+  opacity:.85;
+}
+
+/* ESTANTE SELECIONADA */
+
+.estante.selecionada{
+  stroke:#000;
+  stroke-width:4;
+}
+
+/* NUMERAÇÃO */
+
+.numero{
+  fill:#222;
+  font-size:18px;
+  font-weight:bold;
+  text-anchor:middle;
+  dominant-baseline:middle;
+  pointer-events:none;
+}
+
+/* RODAPÉ */
+
+.rodape{
+  margin-top:15px;
+  padding:15px;
+  text-align:center;
+  background:#f3eee8;
+  border-radius:8px;
+  font-weight:600;
+}
+
+/* RESPONSIVO */
+
+@media (max-width:1200px){
+
+  .content{
+    flex-direction:column;
+  }
+
+  aside{
+    width:100%;
+  }
+
+  .mapa{
+    height:700px;
+  }
+}
+
+@media (max-width:768px){
+
+  .title{
+    font-size:20px;
+  }
+
+  header{
+    flex-direction:column;
+    height:auto;
+    gap:10px;
+    padding:15px;
+  }
+
+  .actions{
+    width:100%;
+  }
+
+  .actions button{
+    flex:1;
+  }
+
+  .mapa{
+    height:500px;
+  }
+}

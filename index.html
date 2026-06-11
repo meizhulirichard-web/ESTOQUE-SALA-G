@@ -1,0 +1,120 @@
+<div class="app">
+
+  <header>
+    <div class="title">
+      📦 SISTEMA DE ESTOQUE - SALA G
+    </div>
+
+    <div class="actions">
+      <button>Produtos Cadastrados</button>
+      <button>Sobre</button>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <aside>
+
+      <!-- CADASTRO -->
+      <div class="card">
+
+        <h2>📦 CADASTRO DE PRODUTO</h2>
+
+        <label>Código do Produto</label>
+        <input type="text" id="codigo">
+
+        <label>Descrição</label>
+        <input type="text" id="descricao">
+
+        <label>Quantidade</label>
+        <input type="number" id="quantidade">
+
+        <div class="row">
+
+          <div>
+            <label>Estante</label>
+            <select id="estante"></select>
+          </div>
+
+          <div>
+            <label>Nível</label>
+            <select id="nivel">
+              <option>A</option>
+              <option>B</option>
+              <option>C</option>
+              <option>D</option>
+              <option>E</option>
+            </select>
+          </div>
+
+        </div>
+
+        <button class="save" id="btnSalvar">
+          Salvar Produto
+        </button>
+
+      </div>
+
+      <!-- BUSCA -->
+      <div class="card">
+
+        <h2>🔍 BUSCAR PRODUTO</h2>
+
+        <label>Código do Produto</label>
+
+        <input
+          type="text"
+          id="buscarCodigo"
+          placeholder="Digite o código"
+        >
+
+        <button class="save" id="btnBuscar">
+          Localizar
+        </button>
+
+        <div
+          class="result"
+          id="resultadoBusca"
+        >
+          Resultado da busca aparecerá aqui.
+        </div>
+
+      </div>
+
+    </aside>
+
+    <main>
+
+      <h2>🗺️ MAPA DA SALA G</h2>
+
+      <svg
+        id="mapa"
+        class="mapa"
+        viewBox="0 0 1250 800"
+      >
+
+        <rect
+          x="20"
+          y="20"
+          width="1200"
+          height="740"
+          rx="8"
+          fill="#fff"
+          stroke="#555"
+          stroke-width="8"
+        />
+
+      </svg>
+
+      <div class="rodape">
+        💡 Clique em uma estante para selecionar sua localização
+      </div>
+
+    </main>
+
+  </div>
+
+</div>
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
